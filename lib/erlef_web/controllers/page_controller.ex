@@ -21,7 +21,6 @@ defmodule ErlefWeb.PageController do
     render(conn,
       working_groups: Posts.all(WorkingGroup),
       latest_news: latest_news,
-      tweets: Twitter.latest_tweets(),
       events: Event.approved() |> Enum.take(3)
     )
   end
